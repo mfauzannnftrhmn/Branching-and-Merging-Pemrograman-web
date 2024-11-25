@@ -52,7 +52,7 @@
                     <td><?= htmlspecialchars($row['name']); ?></td>
                     <td>Rp <?= number_format($row['price'], 0, ',', '.'); ?></td>
                     <td>
-                        <a href="upload/<?= htmlspecialchars($row['image']); ?>" target="_blank" class="btn btn-primary btn-sm">Unduh</a>
+                        <a href="../pertemuan-6/<?= htmlspecialchars($row['image']); ?>" target="_blank" class="btn btn-primary btn-sm">Unduh</a>
                     </td>
                     <td>
                         <a href="edit.php?id=<?= $row['id']; ?>" class="btn btn-warning btn-sm">Edit</a>
