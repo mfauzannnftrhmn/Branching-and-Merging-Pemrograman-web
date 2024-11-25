@@ -1,11 +1,11 @@
 <?php 
 session_start();
-// Memeriksa apakah peran session 'role' adalah 'admin', dan menghancurkan session jika benar
-if($_SESSION['role'] == 'admin'){
+if ($_SESSION['role'] = 'admin') {
+    
     session_destroy();
 }
-?>
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -32,6 +32,26 @@ if($_SESSION['role'] == 'admin'){
             text-align: center;
             color: #007bff;
         }
+        .btn-tambah-produk {
+            display: block;
+            width: 100%;
+            padding: 15px;
+            margin: 20px 0;
+            font-size: 18px;
+            font-weight: bold;
+            color: #fff;
+            background: linear-gradient(90deg, #4caf50, #45a049);
+            border: none;
+            border-radius: 50px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+        }
+        .btn-tambah-produk:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+        }
         .btn-logout {
             display: block;
             width: 100%;
@@ -54,6 +74,11 @@ if($_SESSION['role'] == 'admin'){
 
     <div class="container">
         <h1>Selamat datang Administrator, <?php echo $_SESSION['name']; ?></h1>
+
+        <!-- Tombol Tambah Produk -->
+        <a href="create.php" class="btn-tambah-produk">Tambah Produk</a>
+
+        <!-- Tombol Logout -->
         <a href="./backend/logout.php" class="btn-logout">Logout</a>
     </div>
 
