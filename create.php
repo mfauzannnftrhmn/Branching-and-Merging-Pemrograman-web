@@ -7,37 +7,96 @@
     <!-- Link Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
+      
         body {
-            background-color: #f8f9fa;
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
+
+       
         .container {
-            max-width: 600px;
+            max-width: 700px;
             margin: 50px auto;
-            padding: 20px;
-            background: #ffffff;
-            border-radius: 10px;
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
         }
+
+        .container:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+       
+        h1 {
+            font-size: 2rem;
+            font-weight: 600;
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        
+        .form-control {
+            border-radius: 30px;
+            padding: 12px 20px;
+            border: 2px solid #ddd;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
         .form-control:focus {
-            border-color: #0d6efd;
-            box-shadow: 0 0 5px rgba(13, 110, 253, 0.5);
+            border-color: #ff7e5f;
+            box-shadow: 0 0 5px rgba(255, 126, 95, 0.5);
         }
+
+        
         .btn-primary {
-            background-color: #0d6efd;
-            border-color: #0d6efd;
+            background: linear-gradient(90deg, #ff7e5f, #feb47b);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #fff;
+            transition: all 0.3s ease;
         }
+
         .btn-primary:hover {
-            background-color: #084298;
-            border-color: #084298;
+            background: linear-gradient(90deg, #feb47b, #ff7e5f);
+            transform: scale(1.05);
         }
+
+        
+        .btn-outline-primary {
+            border-color: #ff7e5f;
+            color: #ff7e5f;
+            padding: 10px 20px;
+            font-weight: 600;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-outline-primary:hover {
+            background-color: #ff7e5f;
+            color: #fff;
+        }
+
+        
         .custom-file-label::after {
             content: "Browse";
+            color: #ff7e5f;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
+
     <div class="container">
-        <h1 class="text-center text-primary mb-4">Tambah Produk</h1>
+        <h1>Tambah Produk</h1>
         <div class="text-center mb-4">
             <a href="show.php" class="btn btn-outline-primary">Lihat Data Produk</a>
         </div>
@@ -59,6 +118,7 @@
             </div>
         </form>
     </div>
+
     <!-- Link Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
